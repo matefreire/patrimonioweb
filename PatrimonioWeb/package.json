@@ -1,0 +1,21 @@
+{
+  "name": "patrimonioweb",
+  "version": "1.0.0",
+  "description": "Projeto de Web II",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateus Silva Freire - 201611316035",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "sequelize-cli": "^6.2.0"
+  }
+}
