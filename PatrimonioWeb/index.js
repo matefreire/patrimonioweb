@@ -4,6 +4,7 @@ const port = 8080
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize('patrimonioweb','admpatrimonio','senha',{host: "localhost",dialect: "mysql"});
 const handlebars = require('express-handlebars'); 
+const bodyParser = require('body-parser');
 
 // Configurações
     // Testando conexão com o banco
@@ -12,6 +13,9 @@ const handlebars = require('express-handlebars');
     }).catch((e)=>{
         console.log('Erro ao se conectar ao banco. Erro: '+e);
     });
+    //Body parser
+    app.use(bodyParser.urlencoded({extended:false}))
+    app.use(bodyParser.json())
 
     // Criando template engine
     app.engine('handlebars',handlebars({defaultLayout: 'main'}));
