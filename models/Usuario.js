@@ -3,19 +3,19 @@ const db = require('./db');
 // Criando tabela usuários
 const Usuario = db.sequelize.define('usuarios', {
     codigo: {
-        type: Sequelize.INTEGER
+        type: db.Sequelize.INTEGER
     }, 
     nome: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     },
     email: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     },
     login: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     },
     senha: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     }
 });
 
