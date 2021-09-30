@@ -26,7 +26,8 @@ app.get('/', (req, res) => {
 app.get('/validarLogin', (req, res) => {
     //Validar usuário
     let senhaHash = bcrypt.hash(req.body.senha,10)
-    Usuario.findAll({
+    // Busca se tem login cadastrado e se a senha está correta
+    let resultadoConsulta = Usuario.findAll({
         where: {
             [db.Sequelize.Op.and]: [
             {login: req.body.login},
@@ -34,6 +35,11 @@ app.get('/validarLogin', (req, res) => {
         }
     });
 
+    if (resultadoConsulta.login == null) {
+        console.log('Erro ao efetuar login');
+    }
+
+    
     // res.render(__dirname +'/views/layouts/login.handlebars')
 })
 

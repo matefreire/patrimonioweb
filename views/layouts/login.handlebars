@@ -1,28 +1,26 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 col-xs-10" style="border-color: gray!important; border-width: 0.5px; border-radius: 10px; border: solid;">
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <img src="/image/Logo.jpeg" class="img-fluid" style="width: 50%; margin-left: 25%;" alt="Imagem responsiva">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="login">Login</label>
-                    <input type="text" class="form-control" name="login" id="txtLogin">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="txtSenha">Senha</label>
-                    <input type="password" class="form-control" id="txtSenha">
-                </div>
-            </div>
-            <div class="row" style="margin-top:10px; padding:5px;">
-                <div class="form-group col-md-6">
-                    <button id="Submit" class="btn btn-outline-primary" style="width:100%;">Clique Aqui</button>
-                </div>
-            </div>
+    <form action="/validarLogin" method="get">
+        <div class="containerImagem">
+            <img src="/image/Logo.jpeg" class="img-fluid" alt="Imagem responsiva" />
         </div>
+                
+        <div class="containerLogin">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" name="login" id="txtLogin" />
+        </div>
+                
+        
+        <div class="containerSenha">
+            <label for="txtSenha">Senha</label>
+            <input type="password" class="form-control" id="txtSenha" />
+        </div>
+
+        <div class="containerBotaoLogin">
+            <button id="Submit" class="btn btn-outline-success" >Entrar</button>
+        </div>
+        
+    </form>
+    <div class="containerBotaoLogin">
+        <button class="btn btn-outline-primary" onclick="redirecionarCriarUsuario()" >Criar Usuário</button>
     </div>
 </div>
