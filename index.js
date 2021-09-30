@@ -14,12 +14,12 @@ const bodyParser = require('body-parser');
         console.log('Erro ao se conectar ao banco. Erro: '+e);
     });
     //Body parser
-    app.use(bodyParser.urlencoded({extended:false}))
-    app.use(bodyParser.json())
+    app.use(bodyParser.urlencoded({extended:false}));
+    app.use(bodyParser.json());
 
     // Criando template engine
     app.engine('handlebars',handlebars({defaultLayout: 'main'}));
-    app.set('view-engine', 'handlebars')
+    app.set('view-engine', 'handlebars');
 
 
 // Criando tabela usuários
@@ -47,7 +47,7 @@ Usuarios.sync();
 
 //Routes
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    res.render(__dirname +'/views/layouts/login.handlebars')
 })
 
 // app.get('/', (req, res) => {
