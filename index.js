@@ -43,26 +43,10 @@ const Usuarios = sequelize.define('usuarios', {
 
 Usuarios.sync();
 
-
-
 //Routes
 app.get('/', (req, res) => {
     res.render(__dirname +'/views/layouts/login.handlebars')
 })
-
-// app.get('/', (req, res) => {
-//     //   res.send('Hello World!')
-// })
-
-// Lembrar de colocar isso
-// res.render(__dirname +'/views/layouts/formulario')
-
-
-// app.get('/', (req, res) => {
-//     //   res.send('Hello World!')
-// })  
-
-
 
 
 app.listen(port, () => {
