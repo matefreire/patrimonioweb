@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize')
+const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = new Sequelize('patrimonioweb','admpatrimonio','senha',{host: "localhost",dialect: "mysql"});
 
 // Testando conexão com o banco
@@ -9,6 +9,7 @@ sequelize.authenticate().then(()=>{
 });
 
 module.exports = {
-    Sequelize = Sequelize,
-    sequelize = sequelize
+    Sequelize: Sequelize,
+    sequelize: sequelize,
+    DataTypes: DataTypes
 }

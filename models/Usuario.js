@@ -3,22 +3,22 @@ const db = require('./db');
 // Criando tabela usuários
 const Usuario = db.sequelize.define('usuarios', {
     codigo: {
-        type: db.Sequelize.INTEGER
+        type: db.DataTypes.INTEGER
     }, 
     nome: {
-        type: db.Sequelize.STRING
+        type: db.DataTypes.STRING
     },
     email: {
-        type: db.Sequelize.STRING
+        type: db.DataTypes.STRING
     },
     login: {
-        type: db.Sequelize.STRING
+        type: db.DataTypes.STRING
     },
     senha: {
-        type: db.Sequelize.STRING
+        type: db.DataTypes.STRING
     }
 });
 
-Usuarios.sync();
+Usuario.sync();
 
 module.exports = Usuario;
