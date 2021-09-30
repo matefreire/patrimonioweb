@@ -5,7 +5,8 @@ const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const Usuario = require('./models/Usuario');
 const bcrypt = require('bcrypt');
-const db = require('./models/db')
+const db = require('./models/db');
+
 
 // Configurações
     //Body parser
@@ -37,6 +38,10 @@ app.get('/validarLogin', (req, res) => {
 
     if (resultadoConsulta.login == null) {
         console.log('Erro ao efetuar login');
+        return
+    } else {
+        //next.redi
+        
     }
 
     
