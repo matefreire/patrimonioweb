@@ -1,26 +1,26 @@
-<div class="container-fluid">
-    <form action="/validarLogin" method="get">
+<div class="containerMainLogin">
+    <form id="formularioLogin" action="/validarLogin" method="get">
         <div class="containerImagem">
-            <img src="/image/Logo.jpeg" class="img-fluid" alt="Imagem responsiva" />
+            <img src="/image/Logo.jpeg" class="imagem" alt="Imagem responsiva" />
         </div>
                 
         <div class="containerLogin">
             <label for="login">Login</label>
-            <input type="text" class="form-control" name="login" id="txtLogin" />
+            <input type="text" class="form-control" name="login" id="login" />
         </div>
                 
         
         <div class="containerSenha">
-            <label for="txtSenha">Senha</label>
-            <input type="password" class="form-control" id="txtSenha" />
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" name="senha" id="senha" />
         </div>
 
         <div class="containerBotaoLogin">
-            <button id="Submit" class="btn btn-outline-success" >Entrar</button>
+            <button id="Submit" class="btn btn-outline-success botaoLogin" >Entrar</button>
         </div>
         
     </form>
     <div class="containerBotaoLogin">
-        <a href="/cadastrarUsuario"><button class="btn btn-outline-primary" onclick="redirecionarCriarUsuario()" >Criar Usuário</button></a>
+        <a href="/cadastrarUsuario"><button class="btn btn-outline-primary botaoLogin" onclick="redirecionarCriarUsuario()" >Criar Usuário</button></a>
     </div>
 </div>

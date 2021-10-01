@@ -1,0 +1,13 @@
+<div class="containerMainMateriais">
+    <div class="tituloMaterial">
+        <h1 class="tituloTexto">Materiais
+    </div>
+    <div class="cadastrar">
+        <a href="/cadastrarmaterial"><button class="btn btn-primary botaoWW">Cadastrar</button></a>
+    </div>
+    <div class="containerPainel">
+        {{#each material}}
+            <p class="elementoLista">Código: {{codigo}} | Descrição: {{descricao}}</p>
+        {{/each}}
+    </div>
+</div>

@@ -1,7 +1,7 @@
 const db = require('./db');
 
 const Material = db.sequelize.define('materiais', {
-    condigo: {
+    codigo: {
         type: db.DataTypes.INTEGER
     },
     descricao: {
