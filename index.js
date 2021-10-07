@@ -27,17 +27,21 @@ const path = require("path");
 app.get('/', (req, res) => {
     
     res.render(__dirname +'/views/layouts/login.handlebars')
-})
+});
+
 app.get('/home', (req, res) => {
     
     res.render(__dirname +'/views/layouts/home.handlebars')
-})
+});
+
 app.get('/materiaisww', (req, res) => {
     
     Material.findAll().then((material)=>{
         res.render(__dirname +'/views/layouts/materiaisWW.handlebars', {material: material})
-    })
-})
+    });
+
+});
+
 app.get('/cadastrarmaterial', (req, res) => {
     res.render(__dirname +'/views/layouts/cadastrarmaterial.handlebars')
 })
