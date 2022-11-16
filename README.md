@@ -1,2 +1,1 @@
-# patrimonioweb
-Projeto de Web II
+# patrimonioweb - Sistema de Controle de Patrimônio
